@@ -1,0 +1,25 @@
+:root{--bg:#fbfaf7;--fg:#222;--muted:#666;--accent:#0b6e4f;--card:#fff;--line:#e5e2db}
+@media (prefers-color-scheme:dark){:root{--bg:#161616;--fg:#eee;--muted:#aaa;--accent:#5fd3a8;--card:#202020;--line:#333}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.8 -apple-system,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+header.site,main,footer{max-width:760px;margin:0 auto;padding:0 16px}
+header.site{padding-top:28px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.brand{font-weight:700;font-size:22px;color:var(--fg);text-decoration:none}
+.tagline{margin:4px 0 12px;color:var(--muted);font-size:15px}
+h1{font-size:26px;line-height:1.4;margin:28px 0 8px}
+h2{font-size:21px;margin:32px 0 8px}
+h3{font-size:18px;margin:0 0 4px}
+a{color:var(--accent)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px;margin:12px 0}
+.card a{text-decoration:none;color:inherit;display:block}
+.card p{margin:4px 0;color:var(--muted);font-size:15px}
+.date,.meta{color:var(--muted);font-size:14px}
+.note{background:var(--card);border-left:4px solid var(--accent);padding:10px 14px;margin:16px 0;font-size:15px}
+.table-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:15px;margin:12px 0}
+th,td{border:1px solid var(--line);padding:8px;text-align:left;vertical-align:top}
+th{background:var(--card)}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:8px 14px;border-radius:8px;font-size:15px;margin:4px 0}
+@media (prefers-color-scheme:dark){.btn{color:#111}}
+footer{border-top:1px solid var(--line);margin-top:40px;padding-top:12px;padding-bottom:40px;color:var(--muted);font-size:14px}
+ul{padding-left:1.2em}
