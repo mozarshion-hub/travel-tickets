@@ -4,14 +4,15 @@
   --bg:#fbf7f2;          /* 米白紙感 */
   --paper:#fffdf9;
   --fg:#3b3a40;
-  --muted:#8a8590;
+  --muted:#69646e;
   --line:#ece4dc;
   --pink:#f6c9d0;        /* 草莓 */
-  --pink-deep:#d9798a;
+  --pink-deep:#c83e57;
+  --pink-ink:#a62f44;     /* 粉標籤上的字，要在粉底上也 >=4.5:1 */
   --mint:#cdeadf;        /* 薄荷 */
-  --mint-deep:#4f9c84;
+  --mint-deep:#386f5e;
   --lav:#ddd5f3;         /* 薰衣草 */
-  --lav-deep:#7d6bb8;
+  --lav-deep:#6550a8;
   --butter:#fbedc0;      /* 奶油 */
   --sky:#d4e7f7;         /* 天空 */
   --accent:var(--pink-deep);
@@ -19,7 +20,7 @@
 }
 @media (prefers-color-scheme:dark){:root{
   --bg:#1f1d22;--paper:#28252c;--fg:#ece8ee;--muted:#a59fac;--line:#3a3640;
-  --pink:#5a3a42;--pink-deep:#f0a7b4;--mint:#2f4a42;--mint-deep:#8fd6bf;
+  --pink:#5a3a42;--pink-deep:#f0a7b4;--pink-ink:#f0a7b4;--mint:#2f4a42;--mint-deep:#8fd6bf;
   --lav:#3d3754;--lav-deep:#c2b6ee;--butter:#4d4430;--sky:#2e3e4d;
   --shadow:0 6px 22px rgba(0,0,0,.25);
 }}
@@ -42,6 +43,7 @@ header.site::before{
   content:"";display:block;height:6px;border-radius:6px;margin-bottom:22px;
   background:linear-gradient(90deg,var(--pink) 0 25%,var(--butter) 25% 50%,var(--mint) 50% 75%,var(--lav) 75% 100%);
 }
+header.site h1{margin:0;font-size:inherit;line-height:inherit;font-weight:inherit}
 .brand{
   font-family:"Noto Serif TC",serif;font-weight:700;font-size:24px;
   color:var(--fg);text-decoration:none;letter-spacing:.08em;
@@ -82,7 +84,7 @@ main,footer{max-width:760px;margin:0 auto;padding:0 20px}
   background:var(--lav);color:var(--lav-deep);letter-spacing:.06em;
 }
 .tag.mint{background:var(--mint);color:var(--mint-deep)}
-.tag.pink{background:var(--pink);color:var(--pink-deep)}
+.tag.pink{background:var(--pink);color:var(--pink-ink)}
 .date,.meta{color:var(--muted);font-size:13px;letter-spacing:.08em}
 
 /* 文章 */
@@ -100,6 +102,7 @@ article h2:nth-of-type(4n+3){background:linear-gradient(transparent 55%,var(--pi
 article h2:nth-of-type(4n+4){background:linear-gradient(transparent 55%,var(--lav) 55%)}
 article p{margin:12px 0}
 article strong{background:linear-gradient(transparent 62%,var(--pink) 62%);font-weight:500}
+
 .note{
   background:var(--mint);border-radius:14px;padding:12px 16px;margin:18px 0;font-size:15px;
 }
